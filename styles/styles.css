@@ -1,0 +1,200 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #111;
+  }
+  
+  /* Header Styles */
+  .header {
+    background: #6a97c4; /* Dark blue background */
+    color: #fff;
+    padding: 1%; /* Relative padding for responsiveness */
+  }
+  
+  .container {
+    width: 95%; /* Adjusted to prevent overflow */
+    max-width: 100%; /* Optional: Set a max-width for larger screens */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+  }
+  
+  
+  /* Navigation Menu */
+  .navbar {
+    margin: auto;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .navbar ul li {
+    margin-left: 10%;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 110%; /* Relative font size */
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Transition both color and font-size */
+}
+
+.navbar ul li a:hover {
+    color: #39ffd7; /* Teal color on hover */
+    font-size: 120%;
+}
+
+.intro{
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: center; /* Space between text and image */
+  align-items: center;
+}
+/* Intro Section */
+.intro-div {
+  height: 90vh;
+  width: 95%;
+  display: flex;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center;
+  background-color: #111; /* Dark background for the intro section */
+  padding: 0 5%; /* Add some padding to the sides */
+}
+
+.intro-img {
+  flex: 1; /* Take up equal space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.intro-img img {
+  width: 80%; /* Adjust the size of the image */
+  height: 80%; /* Adjust the size of the image */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the circle */
+}
+
+.intro-txt {
+  flex: 1; /* Take up equal space */
+  text-align: left; /* Align text to the left */
+  position: relative; /* Make the container relative to this div */
+  max-height: 80%; /* Ensure it takes up full height */
+  display: flex;
+  align-items: center; /* Center vertically */
+justify-content: center;
+}
+
+#container {
+  position: relative; /* Change to relative */
+  width: 100%; /* Take up full width of intro-txt */
+  height: 40pt;
+  filter: url(#threshold) blur(0.5px);
+  justify-content: center;
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%; /* Take up full width */
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 80pt;
+  text-align: center; /* Center the text horizontally */
+  /* user-select: none; */
+  color: white; /* Ensure text is visible on dark background */
+  left: 50%; /* Move the text to the middle horizontally */
+  top: 50%; /* Move the text to the middle vertically */
+  transform: translate(-50%, -50%); /* Shift the text back by half its width and height */
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 80%;
+  background-color: #6a97c4;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8); /* Add shadow */
+  padding: 3%; /* Add padding for spacing */
+}
+
+.about-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1%;
+  color: #fff; /* White text for contrast */
+}
+
+.about-content {
+  text-align: left;
+  padding: 0 20px;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff; /* White text for contrast */
+}
+
+.about-content p {
+  font-size: 110%;
+  line-height: 1.6;
+  color: #f0f0f0; /* Light gray text for readability */
+}
+
+.about-content ul {
+  list-style-type: disc;
+  margin-left: 1%;
+  color: #f0f0f0; /* Light gray text for readability */
+  padding-left: 0; /* Remove default padding */
+  display: flex; /* Make the list items flex containers */
+  flex-direction: row; /* Align items horizontally */
+  gap: 3%; /* Add space between list items */
+  max-width: 50%;
+}
+
+.about-content ul li {
+  font-size: 110%;
+  font-weight: bold;
+  margin-bottom: 0; /* Remove bottom margin for horizontal layout */
+  display: inline-block; /* Ensure list items are inline */
+}
+
+.link-img {
+  height: 8%;
+  width: 8%;
+  transition: transform 0.5s ease; /* Smooth transition for the transform */
+}
+
+/* Hover effect */
+.link-img:hover {
+  transform: scale(1.2) rotate(15deg); /* Scale up and tilt to the right */
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
