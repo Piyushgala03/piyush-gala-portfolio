@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Desktop Version</title>
+
+  <script>
+    function checkScreenSize() {
+      console.log("Checking screen size...");
+      console.log("Window width:", window.innerWidth);
+
+      if (window.innerWidth < 400) {
+        console.log("Redirecting to mobile.html...");
+        window.location.replace("mobile.html");
+      } else {
+        console.log("Staying on desktop version.");
+      }
+    }
+
+    // Run on load
+    window.addEventListener("load", checkScreenSize);
+
+    // Run on resize
+    window.addEventListener("resize", checkScreenSize);
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Desktop Version</h1>
+  <p>This view is for larger screens.</p>
+</body>
+</html>

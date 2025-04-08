@@ -172,7 +172,7 @@ justify-content: center;
   display: flex; /* Make the list items flex containers */
   flex-direction: row; /* Align items horizontally */
   gap: 3%; /* Add space between list items */
-  max-width: 50%;
+  max-width: 65%;
 }
 
 .about-content ul li {
