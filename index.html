@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1024">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Science Portfolio</title>
   <link rel="stylesheet" href="/styles/styles.css">
 </head>
@@ -81,5 +81,31 @@
     </div>
   </div>
   <script src="/scripts/script.js"></script>
+  <script>
+    let lastRedirectTime = 0;
+  
+    function checkScreenWidth() {
+      const width = window.innerWidth;
+      const path = window.location.pathname;
+      const now = Date.now();
+  
+      // Avoid redirect loops
+      if (now - lastRedirectTime < 500) return;
+  
+      if (width < 400 && !path.includes("mobile.html")) {
+        lastRedirectTime = now;
+        window.location.replace("mobile.html");
+      } else if (width >= 400 && path.includes("mobile.html")) {
+        lastRedirectTime = now;
+        window.location.replace("index.html");
+      }
+    }
+  
+    window.addEventListener('load', checkScreenWidth);
+    window.addEventListener('resize', checkScreenWidth);
+  </script>
+  
+  
+  
 </body>
 </html>
