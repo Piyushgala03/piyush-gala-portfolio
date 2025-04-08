@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Data Science Portfolio</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Piyush Gala</h1>
+        <p>Data Scientist | Turning Data into Insights</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+      </nav>
+    </div>
+  </header>
+  <div class="intro">
+    <div class="intro-div">
+      <div class="intro-txt">
+        <div id="container">
+          <span id="text1"></span>
+          <span id="text2"></span>
+        </div>
+        <svg id="filters">
+          <defs>
+            <filter id="threshold">
+              <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                      0 1 0 0 0
+                                      0 0 1 0 0
+                                      0 0 0 255 -140" />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      <div class="intro-img">
+        <img src="/static/piyush_gala.jpg" alt="Portrait of Data Scientist Piyush Gala">
+      </div>
+    </div>
+  </div>
+
+  <div class="about-container">
+    <div class="about-card">
+      <h1>About Me</h1>
+      <div class="about-content">
+        <div class="bio">
+          <p>
+            Hi, I'm Piyush Gala! I have a strong background in data science and machine learning, with a passion for solving real-world problems using data-driven approaches. I have completed my graduation from KES Shroff College, and my interests include machine learning, data visualization, and building scalable data solutions. My goal is to leverage my skills to make a meaningful impact in the field of data science.
+          </p>
+        </div>
+        
+        <div class="skills">
+          <h2>Skills & Technologies</h2>
+
+          <div class="skill-row">
+            <span class="skill-label">Languages & Tools</span>
+            <span class="skill-arrow">&rarr;</span>
+            <span class="skill-list">Python, MYSQL, Excel, Machine Learning</span>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Libraries</span>
+            <span class="skill-arrow">&rarr;</span>
+            <span class="skill-list">NumPy, Pandas, Matplotlib, Scikit-learn</span>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Concepts</span>
+            <span class="skill-arrow">&rarr;</span>
+            <span class="skill-list">Statistics, Data Wrangling, Data Visualization, Data Analysis, A/B Testing</span>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Soft Skills</span>
+            <span class="skill-arrow">&rarr;</span>
+            <span class="skill-list">Business Communication, Recommendation Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-container">
+    <div class="about-card">
+      <div class="certifications">
+        <h2>Certifications & Achievements</h2>
+        <div class="icon-container">
+          <img class="link-img" src="/static/excel.png" alt="Excel" onclick="window.location.href='https://drive.google.com/file/d/1hL6kNkMjt5P9Y0g252DTgCsvWDEgcCXR/view?usp=drive_link';">
+          <img class="link-img" src="/static/statistics.png" alt="Statistics" onclick="window.location.href='https://drive.google.com/file/d/1QM9c8asFaDgyH6kqVQ_wX3NCDc_X3MVB/view?usp=drive_link';">
+          <img class="link-img" src="/static/sql.png" alt="SQL" onclick="window.location.href='https://drive.google.com/file/d/13QjpX5-LH5JJVSRH_0lmyOPAW0TWaW_V/view?usp=drive_link';">
+          <img class="link-img" src="/static/ml.png" alt="Machine Learning" onclick="window.location.href='index.html'">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/scripts/script.js"></script>
+  <!-- Responsive Redirect Script -->
+  <script>
+    let lastRedirectTime = 0;
+  
+    function checkScreenWidth() {
+      const width = window.innerWidth;
+      const now = Date.now();
+  
+      if (now - lastRedirectTime < 1000) return;
+  
+      if (width < 1000) {  // Using common mobile breakpoint
+        lastRedirectTime = now;
+        window.location.href = "mobile.html";
+      }
+    }
+  
+    window.addEventListener("load", checkScreenWidth);
+    window.addEventListener("resize", checkScreenWidth);
+  </script>
+  
+  
+  
+  
+</body>
+</html>
