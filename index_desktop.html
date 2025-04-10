@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Data Science Portfolio</title>
   <link rel="stylesheet" href="/styles/styles.css">
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -104,6 +105,17 @@
       </div>
     </div>
   </div>
+
+  <!-- Projects Section -->
+  <section class="projects-container" id="projects">
+    <h1 class="projects-title">Projects</h1>
+    <div class="project-cards" id="projectContainer"></div>
+  </section>
+  
+  
+  
+  
+  
   
   <script src="/scripts/script.js"></script>
   <!-- Responsive Redirect Script -->
@@ -124,6 +136,47 @@
   
     window.addEventListener("load", checkScreenWidth);
     window.addEventListener("resize", checkScreenWidth);
+
+
+    async function loadExcelProjects() {
+      try {
+        const response = await fetch('/data/projects.xlsx');
+        const arrayBuffer = await response.arrayBuffer();
+
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const projects = XLSX.utils.sheet_to_json(sheet);
+
+        renderProjects(projects);
+      } catch (error) {
+        console.error("Error loading Excel file:", error);
+      }
+    }
+
+    function renderProjects(projects) {
+      const container = document.getElementById("projectContainer");
+      container.innerHTML = "";
+
+      projects.forEach(project => {
+        const card = document.createElement("div");
+        card.className = "project-card";
+
+        card.innerHTML = `
+          <div class="card-content">
+            <div class="project-img" style="background-image: url('${project.ImageURL}')"></div>
+            <h2>${project.Title}</h2>
+            <p class="project-desc">${project.Description}</p>
+          </div>
+          <a href="${project.GitHubLink}" target="_blank" class="overlay-text">GitHub Link</a>
+        `;
+
+
+        container.appendChild(card);
+      });
+    }
+
+    // Load projects when the page is loaded
+    window.addEventListener("DOMContentLoaded", loadExcelProjects);
   </script>
   
   
