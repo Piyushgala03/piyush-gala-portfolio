@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Piyush Gala | Data Scientist</title>
   <link rel="stylesheet" href="/styles/mobile.css">
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
   <header>
@@ -63,6 +64,12 @@
     </div>
   </section>
 
+  <section class="projects">
+    <h1>Projects</h1>
+    <div class="project-cards" id="projectContainer"></div>
+  </section>
+  
+
   <footer>
     <p>© 2025 Piyush Gala</p>
   </footer>
@@ -85,6 +92,45 @@
   
     window.addEventListener("load", checkScreenWidth);
     window.addEventListener("resize", checkScreenWidth);
+
+
+    async function loadExcelProjects() {
+    try {
+      const response = await fetch('/data/projects.xlsx');
+      const arrayBuffer = await response.arrayBuffer();
+
+      const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const projects = XLSX.utils.sheet_to_json(sheet);
+
+      renderProjects(projects);
+    } catch (error) {
+      console.error("Error loading Excel file:", error);
+    }
+  }
+
+  function renderProjects(projects) {
+    const container = document.getElementById("projectContainer");
+    container.innerHTML = "";
+
+    projects.forEach(project => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+
+      card.innerHTML = `
+        <div class="card-content">
+          <div class="project-img" style="background-image: url('${project.ImageURL}')"></div>
+          <h2>${project.Title}</h2>
+          <p class="project-desc">${project.Description}</p>
+          <a href="${project.GitHubLink}" target="_blank" class="project-link">GitHub Link</a>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", loadExcelProjects);
   </script>
   
 </body>
