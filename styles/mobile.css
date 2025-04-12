@@ -171,3 +171,46 @@ footer {
   transform: scale(0.95);
   background-color: #ddd;
 }
+
+.show-more-btn {
+  display: inline-block;
+  background-color: #39ffd7; /* Teal color for contrast */
+  color: #111; /* Dark text for readability */
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  box-shadow: 0px 4px 8px rgba(57, 255, 215, 0.4);
+}
+
+.show-more-btn:hover {
+  background-color: #2fe0bb;
+  transform: scale(1.05);
+}
+
+.show-more-btn:active {
+  transform: scale(0.98);
+}
+
+.languages-tools {
+  font-size: 0.9rem; /* Adjust font size */
+  color: #e3e3e3; /* Light gray text for better readability */
+  margin-top: 5px; /* Add some space from the description */
+  font-weight: 500; /* Make it a bit bolder for emphasis */
+}
+
+.languages-tools strong {
+  color: #fff; /* Make the "Languages & Tools Used" text white */
+}
+
+.languages-tools span {
+  font-weight: normal; /* For the languages/tools themselves */
+  color: #39ffd7; /* Teal color for languages/tools */
+  display: block; /* Each language/tool appears in a new line */
+  margin-top: 5px; /* Add some space between each language/tool */
+}
+

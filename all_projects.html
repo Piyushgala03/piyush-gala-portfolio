@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>All Projects - Piyush Gala</title>
+  <link rel="stylesheet" href="/styles/index_desktop_styles.css" />
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Piyush Gala</h1>
+        <p>Data Scientist | Turning Data into Insights</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- All Projects Section -->
+  <section class="projects-container" id="projects">
+    <h1 class="projects-title">All Projects</h1>
+    <div class="project-cards" id="projectContainer"></div>
+  </section>
+
+  <!-- JavaScript to Load All Projects -->
+  <script src="/scripts/all_projects_script.js"></script>
+  <script>
+    let lastRedirectTime = 0;
+  
+    function checkScreenWidth() {
+      const width = window.innerWidth;
+      const now = Date.now();
+  
+      if (now - lastRedirectTime < 1000) return;
+  
+      if (width < 1000) {  // Using common mobile breakpoint
+        lastRedirectTime = now;
+        window.location.href = "all_projects_mobile.html";
+      }
+    }
+  
+    window.addEventListener("load", checkScreenWidth);
+    window.addEventListener("resize", checkScreenWidth);
+  </script>
+</body>
+</html>

@@ -75,6 +75,7 @@
   </footer>
 
   <!-- ✅ JS to redirect back to desktop version -->
+   <script src="/scripts/index_script.js"></script>
   <script>
     let lastRedirectTime = 0;
   
@@ -95,42 +96,58 @@
 
 
     async function loadExcelProjects() {
-    try {
-      const response = await fetch('/data/projects.xlsx');
-      const arrayBuffer = await response.arrayBuffer();
+      try {
+        const response = await fetch('/data/projects.xlsx');
+        const arrayBuffer = await response.arrayBuffer();
 
-      const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-      const sheet = workbook.Sheets[workbook.SheetNames[0]];
-      const projects = XLSX.utils.sheet_to_json(sheet);
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        const sheet = workbook.Sheets[workbook.SheetNames[0]];
+        const projects = XLSX.utils.sheet_to_json(sheet);
 
-      renderProjects(projects);
-    } catch (error) {
-      console.error("Error loading Excel file:", error);
+        renderProjects(projects);
+      } catch (error) {
+        console.error("Error loading Excel file:", error);
+      }
     }
-  }
 
-  function renderProjects(projects) {
-    const container = document.getElementById("projectContainer");
-    container.innerHTML = "";
+    function renderProjects(projects) {
+      const container = document.getElementById("projectContainer");
+      container.innerHTML = "";
 
-    projects.forEach(project => {
-      const card = document.createElement("div");
-      card.className = "project-card";
+      const maxProjectsToShow = 3; // 👈 Set your own number
+      const showMoreContainer = document.createElement("div");
+      showMoreContainer.className = "show-more-container";
 
-      card.innerHTML = `
-        <div class="card-content">
-          <div class="project-img" style="background-image: url('${project.ImageURL}')"></div>
-          <h2>${project.Title}</h2>
-          <p class="project-desc">${project.Description}</p>
-          <a href="${project.GitHubLink}" target="_blank" class="project-link">GitHub Link</a>
-        </div>
-      `;
+      projects.slice(0, maxProjectsToShow).forEach(project => {
+        const card = document.createElement("div");
+        card.className = "project-card";
 
-      container.appendChild(card);
-    });
-  }
+        card.innerHTML = `
+          <div class="card-content">
+            <div class="project-img" style="background-image: url('${project.ImageURL}')"></div>
+            <h2>${project.Title}</h2>
+            <p class="project-desc">${project.Description}</p>
+            <p class="languages-tools"><strong>Languages & Tools:</strong> ${project.LanguagesTools}</p>
+            <a href="${project.GitHubLink}" target="_blank" class="project-link">GitHub Link</a>
+          </div>
+        `;
 
-  window.addEventListener("DOMContentLoaded", loadExcelProjects);
+        container.appendChild(card);
+      });
+
+      if (projects.length > maxProjectsToShow) {
+        const button = document.createElement("button");
+        button.textContent = "Show More Projects";
+        button.className = "show-more-btn";
+        button.onclick = () => {
+          window.location.href = "all_projects.html";
+        };
+        showMoreContainer.appendChild(button);
+        container.appendChild(showMoreContainer); // Append below project cards
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", loadExcelProjects);
   </script>
   
 </body>
