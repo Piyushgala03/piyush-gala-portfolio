@@ -47,7 +47,7 @@ async function loadExcelProjects() {
         button.textContent = "Show More Projects";
         button.className = "show-more-btn";
         button.onclick = () => {
-          window.location.href = "all_projects.html";
+          window.location.href = "all_projects_mobile.html";
         };
         showMoreContainer.appendChild(button);
       }

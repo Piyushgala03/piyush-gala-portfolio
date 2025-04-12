@@ -214,3 +214,27 @@ footer {
   margin-top: 5px; /* Add some space between each language/tool */
 }
 
+.back-home-btn {
+  display: inline-block;
+  background-color: #39ffd7; /* Teal color for contrast */
+  color: #111; /* Dark text for readability */
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(57, 255, 215, 0.4);
+}
+
+.back-home-btn:hover {
+  background-color: #2fe0bb;
+  transform: scale(1.05);
+}
+
+.back-home-btn:active {
+  transform: scale(0.98);
+}

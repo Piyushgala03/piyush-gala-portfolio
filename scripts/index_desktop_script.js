@@ -129,7 +129,7 @@ const elts = {
           button.textContent = "Show More Projects";
           button.className = "show-more-btn";
           button.onclick = () => {
-            window.location.href = "all_projects.html";
+            window.location.href = "all_projects_desktop.html";
           };
           showMoreContainer.appendChild(button);
         }
