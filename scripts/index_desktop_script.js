@@ -116,7 +116,7 @@ const elts = {
               <div class="project-img" style="background-image: url('${project.ImageURL}')"></div>
               <h2>${project.Title}</h2>
               <p class="project-desc">${project.Description}</p>
-              <p class="languages-tools"><strong>Languages & Tools:</strong> ${project.LanguagesTools}</p>
+              <p class="languages-tools"><strong class="languages-tools-strong">Languages & Tools:</strong> ${project.LanguagesTools}</p>
             </div>
             <a href="${project.GitHubLink}" target="_blank" class="overlay-text">GitHub Link</a>
           `;
