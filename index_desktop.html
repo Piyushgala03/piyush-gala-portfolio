@@ -112,7 +112,18 @@
     <div class="project-cards" id="projectContainer"></div>
     <div class="show-more-container" id="showMoreContainer"></div>
   </section>
-  
+
+  <!-- Resume Section -->
+  <section class="resume-container" id="resume">
+    <h1 class="resume-title">Resume</h1>
+    <div class="resume-button-container">
+      <a href="/static/Resume_Piyush_Gala.pdf" download class="resume-download-button">
+        Download Resume
+        <img class="resume-img" src="/static/download.png" alt="Download Icon">
+      </a>
+    </div>
+  </section>
+
 
   <script src="/scripts/index_desktop_script.js"></script>
   <!-- Responsive Redirect Script -->
@@ -127,16 +138,12 @@
   
       if (width < 1000) {  // Using common mobile breakpoint
         lastRedirectTime = now;
-        window.location.href = "index_.html";
+        window.location.href = "index.html";
       }
     }
   
     window.addEventListener("load", checkScreenWidth);
     window.addEventListener("resize", checkScreenWidth);
   </script>
-  
-  
-  
-  
 </body>
 </html>
