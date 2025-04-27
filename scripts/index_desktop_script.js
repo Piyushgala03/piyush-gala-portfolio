@@ -136,3 +136,38 @@ const elts = {
       }
   
       window.addEventListener("DOMContentLoaded", loadExcelProjects);
+
+      function copyEmailToClipboard() {
+        const email = 'pythongala2003@gmail.com';
+        
+        navigator.clipboard.writeText(email)
+          .then(() => {
+            showToast('Email Id copied to clipboard');
+          })
+          .catch(err => {
+            console.error('Failed to copy email: ', err);
+          });
+      }
+      
+      function showToast(message) {
+        // Create a div for toast
+        const toast = document.createElement('div');
+        toast.className = 'custom-toast';
+        toast.innerText = message;
+      
+        document.body.appendChild(toast);
+      
+        // Force reflow to enable animation
+        setTimeout(() => {
+          toast.classList.add('show');
+        }, 100);
+      
+        // Remove after 3 seconds
+        setTimeout(() => {
+          toast.classList.remove('show');
+          // Remove from DOM after fade out
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 500);
+        }, 3000);
+      }
