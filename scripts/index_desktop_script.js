@@ -148,6 +148,18 @@ const elts = {
             console.error('Failed to copy email: ', err);
           });
       }
+
+      function copyContactToClipboard() {
+        const email = 9579038258;
+        
+        navigator.clipboard.writeText(email)
+          .then(() => {
+            showToast('Contact number copied to clipboard');
+          })
+          .catch(err => {
+            console.error('Failed to copy contact number: ', err);
+          });
+      }
       
       function showToast(message) {
         // Create a div for toast
