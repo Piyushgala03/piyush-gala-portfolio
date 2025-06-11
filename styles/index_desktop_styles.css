@@ -270,6 +270,20 @@ justify-content: center;
   transform: scale(1.1) rotate(10deg); /* Scale up and tilt to the right */
 }
 
+.achievements-list{
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.achievements-list p{
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 30px; 
+}
+
 
 .project-card {
   position: relative;
@@ -349,13 +363,13 @@ justify-content: center;
 }
 
 .project-card h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .project-desc {
   font-size: 0.9rem;
   margin: 0.5rem 1rem 0.5rem;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.4;
 }
 
@@ -385,13 +399,13 @@ justify-content: center;
 
 .languages-tools {
   font-size: 0.9rem; /* Adjust font size */
-  color: #fff; /* Light gray text for better readability */
+  color: #000000; /* Light gray text for better readability */
   margin-top: 4px; /* Add some space from the description */
   font-weight: 500; /* Make it a bit bolder for emphasis */
 }
 
 .languages-tools strong {
-  color: #fff; /* Make the "Languages & Tools Used" text white */
+  color: #000000; /* Make the "Languages & Tools Used" text white */
 }
 
 .languages-tools span {

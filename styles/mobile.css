@@ -100,6 +100,22 @@ h1 {
   cursor: pointer;
 }
 
+.achievements-list{
+  cursor: pointer;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.achievements-list p{
+  background-color: #ffffff;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 30px; 
+  font-size: 0.9rem;
+}
+
 /* FOOTER */
 footer {
   font-size: 0.8rem;
@@ -122,7 +138,7 @@ footer {
 }
 
 .project-card {
-  background-color: #2c92ff;
+  background-color: #55a7ff;
   width: 90%;
   max-width: 350px;
   border-radius: 20px;
