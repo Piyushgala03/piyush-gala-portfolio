@@ -15,7 +15,7 @@ body {
 
 /* HEADER */
 header {
-  background-color: #2c92ff;
+  background-color: #55a7ff;
   padding: 0.5rem 0;
 }
 
@@ -77,7 +77,7 @@ h1 {
 }
 
 .skills li {
-  background-color: #2c92ff;
+  background-color: #55a7ff;
   color: #fff;
   padding: 0.4rem 0.9rem;
   border-radius: 12px;
@@ -251,7 +251,7 @@ footer {
   display: inline-block;
   padding: 8px 16px;
   margin: 10px;
-  background-color: #2c92ff;
+  background-color: #55a7ff;
   color: white;
   font-size: 1rem;
   text-decoration: none;
@@ -282,7 +282,7 @@ footer {
   align-items: center;
   gap: 10%;
   margin-bottom: 0%;
-  background-color:#2c92ff;
+  background-color:#55a7ff;
   border-radius: 100px;
   padding: 10px;
   width: 90%;
