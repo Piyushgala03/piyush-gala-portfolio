@@ -4,9 +4,9 @@ const elts = {
     };
 
     const texts = [
-        "Data Scientist",
-        "ML Enthusiast",
-        "Data Storyteller"
+        "Junior SWE",
+        "Test Automation Specialist",
+        "Web Scraper"
     ];
 
     const morphTime = 1;
@@ -40,7 +40,7 @@ const elts = {
 
         fraction = 1 - fraction;
         elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-        elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+        elts.text1.style.opacity = `${Math.pow(fraction, 0.5) * 100}%`;
 
         elts.text1.textContent = texts[textIndex % texts.length];
         elts.text2.textContent = texts[(textIndex + 1) % texts.length];
@@ -61,7 +61,7 @@ const elts = {
 
         let newTime = new Date();
         let shouldIncrementIndex = cooldown > 0;
-        let dt = (newTime - time) / 1000;
+        let dt = (newTime - time) / 1500;
         time = newTime;
 
         cooldown -= dt;
@@ -78,7 +78,6 @@ const elts = {
     }
 
     animate();
-
 
     async function loadExcelProjects() {
       try {
