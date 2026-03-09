@@ -5,7 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Piyush Gala | Junior SWE</title>
   <link rel="icon" type="image/png" href="static/profile.ico">
-  <link rel="stylesheet" href="/styles/mobile.css">
+  <script>
+    (function loadResponsiveStylesheet() {
+      const BREAKPOINT = 1000;
+      const DESKTOP = "/styles/desktop.css";
+      const MOBILE = "/styles/mobile.css";
+      const LINK_ID = "responsive-stylesheet";
+
+      function applyStylesheet() {
+        const targetHref = window.innerWidth >= BREAKPOINT ? DESKTOP : MOBILE;
+        let link = document.getElementById(LINK_ID);
+
+        if (!link) {
+          link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.id = LINK_ID;
+          document.head.appendChild(link);
+        }
+
+        if (link.getAttribute("href") !== targetHref) {
+          link.setAttribute("href", targetHref);
+        }
+      }
+
+      applyStylesheet();
+      window.addEventListener("load", applyStylesheet);
+      window.addEventListener("resize", applyStylesheet);
+    })();
+  </script>
   <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
@@ -69,7 +96,7 @@
   <section class="certs">
     <h1>Certifications & Achievements</h1>
     <div class="achievements-list">
-          <a onclick="window.open('https://www.hackerrank.com/profile/pythongala2003', '_blank');"><p>5⭐ SQL HackerRank</p></a>
+          <a onclick="window.open('https://www.hackerrank.com/profile/pythongala2003', '_blank');"><p>5 Star SQL HackerRank</p></a>
         </div>
     <div class="cert-icons">
       <img class="link-img" src="/static/excel.png" alt="Excel" onclick="window.open('https://drive.google.com/file/d/1hL6kNkMjt5P9Y0g252DTgCsvWDEgcCXR/view?usp=drive_link', '_blank');">
@@ -92,7 +119,7 @@
         Download Resume
         <img class="resume-img" src="/static/download.png" alt="Download Icon">
       </a>
-      <a class="resume-download-button", onclick="window.open('https://drive.google.com/file/d/1dKA3SSsYI5SjMqxd9w8Oi9R59kIlWZ5F/view?usp=sharing', '_blank')">
+      <a class="resume-download-button" onclick="window.open('https://drive.google.com/file/d/1dKA3SSsYI5SjMqxd9w8Oi9R59kIlWZ5F/view?usp=sharing', '_blank')">
         View Resume
         <img class="resume-img" src="/static/view.png" alt="Download Icon">
       </a>
@@ -122,30 +149,12 @@
   
 
   <footer>
-    <p>© 2025 Piyush Gala</p>
+    <p>(c) 2026 Piyush Gala</p>
   </footer>
 
-  <!-- ✅ JS to redirect back to desktop version -->
+  <!-- Shared utility script -->
    <script src="/scripts/index_script.js"></script>
   <script>
-    let lastRedirectTime = 0;
-  
-    function checkScreenWidth() {
-      const width = window.innerWidth;
-      const now = Date.now();
-  
-      if (now - lastRedirectTime < 1000) return;
-  
-      if (width >= 1000) {  // Same breakpoint as desktop
-        lastRedirectTime = now;
-        window.location.href = "index_desktop.html";
-      }
-    }
-  
-    window.addEventListener("load", checkScreenWidth);
-    window.addEventListener("resize", checkScreenWidth);
-
-
     async function loadExcelProjects() {
       try {
         const response = await fetch('/data/projects.xlsx');
@@ -165,7 +174,7 @@
       const container = document.getElementById("projectContainer");
       container.innerHTML = "";
 
-      const maxProjectsToShow = 3; // 👈 Set your own number
+      const maxProjectsToShow = 3; // Adjust number of visible projects
       const showMoreContainer = document.createElement("div");
       showMoreContainer.className = "show-more-container";
 
