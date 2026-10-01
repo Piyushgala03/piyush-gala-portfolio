@@ -1,0 +1,570 @@
+{
+    "seo": {
+        "title": "Alex Morgan | Software Engineer",
+        "description": "Professional portfolio of Alex Morgan, a software engineer specializing in backend development, automation and scalable web applications."
+    },
+
+    "navigation": {
+        "labels": {
+            "about": "About",
+            "education": "Education",
+            "experience": "Experience",
+            "skills": "Skills",
+            "projects": "Projects",
+            "achievements": "Achievements",
+            "freelance": "Freelance",
+            "resume": "Resume",
+            "contact": "Contact"
+        }
+    },
+
+    "sections": {
+        "hero": {
+            "enabled": true
+        },
+
+        "about": {
+            "enabled": true
+        },
+
+        "education": {
+            "enabled": true
+        },
+
+        "experience": {
+            "enabled": true
+        },
+
+        "skills": {
+            "enabled": true
+        },
+
+        "projects": {
+            "enabled": true
+        },
+
+        "achievements": {
+            "enabled": true
+        },
+
+        "freelance": {
+            "enabled": true
+        },
+
+        "resume": {
+            "enabled": true
+        },
+
+        "contact": {
+            "enabled": true
+        }
+    },
+
+
+    "personal": {
+        "name": "Alex Morgan",
+        "shortName": "Alex",
+        "role": "Software Engineer & Backend Developer",
+
+        "location": "Mumbai, India",
+
+        "email": "alex.morgan@example.com",
+
+        "phone": "+91 98765 43210",
+
+        "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85",
+
+        "openToWork": true,
+
+        "openToWorkLabel": "Open to Work"
+    },
+
+
+    "hero": {
+        "eyebrow": "Software Engineer • Backend Developer",
+
+        "title": "Turning complex problems into elegant software.",
+
+        "description": "I build reliable, scalable and user-focused applications with a strong interest in backend engineering, automation and data-driven systems.",
+
+        "stats": [
+            {
+                "value": "3+",
+                "label": "Years Experience"
+            },
+            {
+                "value": "20+",
+                "label": "Projects"
+            },
+            {
+                "value": "8+",
+                "label": "Technologies"
+            }
+        ]
+    },
+
+
+    "about": {
+        "title": "Engineer by mindset. Builder by nature.",
+
+        "subtitle": "A little about who I am and how I approach technology.",
+
+        "paragraphs": [
+            "I'm a software engineer who enjoys transforming ideas into clean, maintainable and practical software. I particularly enjoy backend development, APIs, automation and solving problems that require both logical thinking and engineering discipline.",
+
+            "My approach is simple: understand the problem first, design a maintainable solution, then build it with attention to performance, reliability and developer experience.",
+
+            "Outside of writing code, I enjoy learning new technologies, experimenting with side projects and understanding how products can create real-world value."
+        ],
+
+        "highlights": [
+            {
+                "value": "Backend",
+                "label": "Primary Engineering Focus"
+            },
+            {
+                "value": "Python",
+                "label": "Primary Language"
+            },
+            {
+                "value": "Django",
+                "label": "Backend Framework"
+            },
+            {
+                "value": "Problem Solving",
+                "label": "Engineering Mindset"
+            }
+        ]
+    },
+
+
+    "education": [
+        {
+            "degree": "Bachelor of Science in Information Technology",
+
+            "institution": "Mumbai University",
+
+            "period": "2021 – 2024",
+
+            "grade": "9.44 / 10 CGPA",
+
+            "location": "Mumbai, India"
+        },
+
+        {
+            "degree": "Higher Secondary Certificate",
+
+            "institution": "Example Junior College",
+
+            "period": "2019 – 2021",
+
+            "grade": "88%",
+
+            "location": "Mumbai, India"
+        },
+
+        {
+            "degree": "Secondary School Certificate",
+
+            "institution": "Example High School",
+
+            "period": "2018 – 2019",
+
+            "grade": "91%",
+
+            "location": "Mumbai, India"
+        }
+    ],
+
+
+    "experience": [
+        {
+            "role": "Software Engineer",
+
+            "company": "TechNova Solutions",
+
+            "duration": "1 yr 8 mos",
+
+            "period": "Jan 2025 – Present",
+
+            "description": "Working on backend systems, automation workflows and internal engineering tools.",
+
+            "responsibilities": [
+                "Develop and maintain Python-based backend applications.",
+                "Design REST APIs and integrate third-party services.",
+                "Build automated testing workflows for critical business processes.",
+                "Improve application reliability through logging, monitoring and debugging.",
+                "Collaborate with developers and QA engineers to deliver production-ready features."
+            ]
+        },
+
+        {
+            "role": "Test Automation Engineer",
+
+            "company": "DigitalWorks Pvt. Ltd.",
+
+            "duration": "1 yr 2 mos",
+
+            "period": "Nov 2023 – Dec 2024",
+
+            "description": "Focused on test automation, quality engineering and automation infrastructure.",
+
+            "responsibilities": [
+                "Created automated test suites using Python and Selenium.",
+                "Developed reusable automation utilities.",
+                "Integrated automated tests into development workflows.",
+                "Investigated application failures and regression issues.",
+                "Worked closely with developers to improve software quality."
+            ]
+        },
+
+        {
+            "role": "Software Development Intern",
+
+            "company": "CodeCraft Labs",
+
+            "duration": "6 mos",
+
+            "period": "May 2023 – Oct 2023",
+
+            "description": "Contributed to web application development and internal engineering projects.",
+
+            "responsibilities": [
+                "Developed frontend components using HTML, CSS and JavaScript.",
+                "Worked with REST APIs.",
+                "Fixed bugs and improved existing application features.",
+                "Participated in code reviews and technical discussions."
+            ]
+        }
+    ],
+
+
+    "skills": [
+        {
+            "category": "Backend Development",
+
+            "items": [
+                "Python",
+                "Django",
+                "Django REST Framework",
+                "REST APIs",
+                "Authentication",
+                "API Design"
+            ]
+        },
+
+        {
+            "category": "Databases",
+
+            "items": [
+                "PostgreSQL",
+                "MySQL",
+                "SQL",
+                "Database Design",
+                "Query Optimization"
+            ]
+        },
+
+        {
+            "category": "Frontend",
+
+            "items": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Responsive Design"
+            ]
+        },
+
+        {
+            "category": "Automation & Testing",
+
+            "items": [
+                "Selenium",
+                "PyAutoGUI",
+                "PyWinAuto",
+                "Test Automation",
+                "API Testing",
+                "Regression Testing"
+            ]
+        },
+
+        {
+            "category": "Tools & DevOps",
+
+            "items": [
+                "Git",
+                "GitHub",
+                "Linux",
+                "Docker",
+                "Nginx",
+                "VS Code"
+            ]
+        },
+
+        {
+            "category": "Data & Other",
+
+            "items": [
+                "NumPy",
+                "Pandas",
+                "Matplotlib",
+                "Data Analysis",
+                "Web Scraping",
+                "Problem Solving"
+            ]
+        }
+    ],
+
+
+    "projects": [
+        {
+            "title": "Investor Analytics Platform",
+
+            "category": "FinTech / Web Application",
+
+            "description": "A subscription-based platform providing research tools, calculators, screeners and analytics for long-term investors and swing traders.",
+
+            "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=85",
+
+            "imageAlt": "Financial market analytics displayed on screens",
+
+            "featured": true,
+
+            "technologies": [
+                "Django",
+                "PostgreSQL",
+                "React",
+                "REST API",
+                "Python"
+            ],
+
+            "links": {
+                "github": "https://github.com/example/investor-platform",
+                "live": "https://example.com/investor-platform",
+                "documentation": "https://docs.example.com/investor-platform"
+            }
+        },
+
+        {
+            "title": "Test Automation Framework",
+
+            "category": "Automation",
+
+            "description": "A reusable Python automation framework designed to simplify test creation, execution, logging and reporting.",
+
+            "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85",
+
+            "imageAlt": "Developer working on automation code",
+
+            "featured": true,
+
+            "technologies": [
+                "Python",
+                "Selenium",
+                "PyTest",
+                "Logging",
+                "Automation"
+            ],
+
+            "links": {
+                "github": "https://github.com/example/test-automation",
+                "live": "",
+                "documentation": "https://docs.example.com/test-automation"
+            }
+        },
+
+        {
+            "title": "Django Task Management API",
+
+            "category": "Backend",
+
+            "description": "A production-style REST API for task management with authentication, permissions, filtering and PostgreSQL integration.",
+
+            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
+
+            "imageAlt": "Programming code displayed on a laptop",
+
+            "featured": false,
+
+            "technologies": [
+                "Django",
+                "DRF",
+                "PostgreSQL",
+                "JWT",
+                "Docker"
+            ],
+
+            "links": {
+                "github": "https://github.com/example/django-task-api",
+                "live": "https://api.example.com",
+                "documentation": "https://docs.example.com/task-api"
+            }
+        },
+
+        {
+            "title": "Personal Finance Calculator",
+
+            "category": "Web Application",
+
+            "description": "A collection of financial calculators including SIP, CAGR, XIRR, position sizing and investment planning tools.",
+
+            "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85",
+
+            "imageAlt": "Financial planning and calculator concept",
+
+            "featured": false,
+
+            "technologies": [
+                "JavaScript",
+                "React",
+                "Recharts",
+                "CSS"
+            ],
+
+            "links": {
+                "github": "https://github.com/example/finance-calculators",
+                "live": "https://example.com/calculators",
+                "documentation": ""
+            }
+        }
+    ],
+
+
+    "achievements": [
+        {
+            "icon": "🏆",
+
+            "title": "Academic Excellence",
+
+            "description": "Graduated with a strong academic record and consistently maintained high performance throughout university."
+        },
+
+        {
+            "icon": "🚀",
+
+            "title": "Automation Impact",
+
+            "description": "Designed reusable automation workflows that reduced repetitive manual testing effort."
+        },
+
+        {
+            "icon": "💻",
+
+            "title": "Open Source Projects",
+
+            "description": "Built and published multiple development projects covering backend development, automation and data analysis."
+        },
+
+        {
+            "icon": "📚",
+
+            "title": "Continuous Learning",
+
+            "description": "Continuously expanding expertise across backend engineering, databases, DevOps and software architecture."
+        }
+    ],
+
+
+    "freelance": [
+        {
+            "title": "Business Website",
+
+            "client": "Local Business",
+
+            "status": "Completed",
+
+            "description": "Designed and developed a responsive business website with contact forms, service pages and SEO-friendly structure.",
+
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+
+            "url": "https://example.com/business"
+        },
+
+        {
+            "title": "Inventory Management System",
+
+            "client": "Small Business",
+
+            "status": "Completed",
+
+            "description": "Built an internal inventory management application to track products, stock levels and transactions.",
+
+            "technologies": [
+                "Python",
+                "Django",
+                "PostgreSQL"
+            ],
+
+            "url": "https://example.com/inventory"
+        },
+
+        {
+            "title": "Automation Utility",
+
+            "client": "Private Client",
+
+            "status": "Ongoing",
+
+            "description": "Developed a custom Python automation utility to eliminate repetitive desktop operations.",
+
+            "technologies": [
+                "Python",
+                "PyAutoGUI",
+                "PyWinAuto"
+            ],
+
+            "url": ""
+        }
+    ],
+
+
+    "resume": {
+        "url": "assets/resume.pdf",
+
+        "downloadName": "Alex-Morgan-Resume.pdf"
+    },
+
+
+    "contact": {
+        "email": "alex.morgan@example.com",
+
+        "description": "Have an interesting project, an engineering opportunity or simply want to connect? I'd love to hear from you.",
+
+        "links": [
+            {
+                "label": "LinkedIn",
+                "icon": "in",
+                "url": "https://www.linkedin.com/in/example"
+            },
+
+            {
+                "label": "GitHub",
+                "icon": "⌘",
+                "url": "https://github.com/example"
+            },
+
+            {
+                "label": "Email",
+                "icon": "✉",
+                "url": "mailto:alex.morgan@example.com"
+            },
+
+            {
+                "label": "LeetCode",
+                "icon": "◆",
+                "url": "https://leetcode.com/example"
+            }
+        ]
+    },
+
+
+    "footer": {
+        "tagline": "Designed & engineered with curiosity."
+    }
+}
