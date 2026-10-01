@@ -113,7 +113,7 @@ async function loadPortfolioData() {
 
     try {
 
-        const response = await fetch("data.json");
+        const response = await fetch("data/data.json");
 
         if (!response.ok) {
             throw new Error(
@@ -977,4 +977,591 @@ function renderProjects() {
 
             links.appendChild(
                 createLink(
-                    projectLinks.document
+                    projectLinks.documentation,
+                    "Documentation ↗",
+                    "project-card__link"
+                )
+            );
+        }
+
+        content.appendChild(links);
+
+        card.append(
+            imageWrapper,
+            content
+        );
+
+        container.appendChild(card);
+    });
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+function renderAchievements() {
+
+    const container =
+        getElement("#achievements-grid");
+
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = "";
+
+    (portfolioData.achievements || [])
+        .forEach((achievement) => {
+
+            const card =
+                createElement(
+                    "article",
+                    "achievement-card reveal"
+                );
+
+            card.append(
+                createElement(
+                    "div",
+                    "achievement-card__icon",
+                    achievement.icon || "★"
+                ),
+
+                createElement(
+                    "h3",
+                    "achievement-card__title",
+                    achievement.title
+                ),
+
+                createElement(
+                    "p",
+                    "achievement-card__description",
+                    achievement.description
+                )
+            );
+
+            container.appendChild(card);
+        });
+}
+
+
+/* =========================================================
+   FREELANCE
+========================================================= */
+
+function renderFreelance() {
+
+    const container =
+        getElement("#freelance-grid");
+
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = "";
+
+    (portfolioData.freelance || [])
+        .forEach((project) => {
+
+            const card =
+                createElement(
+                    "article",
+                    "freelance-card reveal"
+                );
+
+            const header =
+                createElement(
+                    "div",
+                    "freelance-card__header"
+                );
+
+            const heading =
+                createElement(
+                    "div"
+                );
+
+            heading.append(
+                createElement(
+                    "h3",
+                    "freelance-card__title",
+                    project.title
+                ),
+
+                createElement(
+                    "div",
+                    "freelance-card__client",
+                    project.client
+                )
+            );
+
+            header.appendChild(heading);
+
+            if (project.status) {
+
+                header.appendChild(
+                    createElement(
+                        "span",
+                        "freelance-card__status",
+                        project.status
+                    )
+                );
+            }
+
+
+            const description =
+                createElement(
+                    "p",
+                    "freelance-card__description",
+                    project.description
+                );
+
+
+            const technologies =
+                createElement(
+                    "div",
+                    "freelance-card__technologies"
+                );
+
+            (project.technologies || [])
+                .forEach((technology) => {
+
+                    technologies.appendChild(
+                        createElement(
+                            "span",
+                            "skill-item",
+                            technology
+                        )
+                    );
+                });
+
+
+            card.append(
+                header,
+                description,
+                technologies
+            );
+
+
+            if (project.url) {
+
+                card.appendChild(
+                    createLink(
+                        project.url,
+                        "View Project ↗",
+                        "project-card__link"
+                    )
+                );
+            }
+
+
+            container.appendChild(card);
+        });
+}
+
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+function renderResume() {
+
+    const resume =
+        portfolioData.resume;
+
+    const link =
+        getElement("#resume-link");
+
+    if (!link || !resume) {
+        return;
+    }
+
+    link.href =
+        resume.url;
+
+    if (resume.downloadName) {
+
+        link.download =
+            resume.downloadName;
+    }
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+function renderContact() {
+
+    const contact =
+        portfolioData.contact;
+
+    setText(
+        "#contact-description",
+        contact.description
+    );
+
+    const emailButton =
+        getElement("#contact-email");
+
+    if (emailButton) {
+
+        emailButton.href =
+            `mailto:${contact.email}`;
+    }
+
+
+    const container =
+        getElement("#contact-links");
+
+    container.innerHTML = "";
+
+    (contact.links || [])
+        .forEach((item) => {
+
+            const link =
+                createLink(
+                    item.url,
+                    `${item.icon || ""} ${item.label}`,
+                    "contact-link"
+                );
+
+            container.appendChild(link);
+        });
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+function renderFooter() {
+
+    const personal =
+        portfolioData.personal;
+
+    const footer =
+        portfolioData.footer || {};
+
+    setText(
+        "#footer-copyright",
+        `© ${new Date().getFullYear()} ${personal.name}. All rights reserved.`
+    );
+
+    setText(
+        "#footer-tagline",
+        footer.tagline ||
+        "Built with HTML, CSS & JavaScript."
+    );
+}
+
+
+/* =========================================================
+   NAVIGATION INTERACTIONS
+========================================================= */
+
+function initializeNavigation() {
+
+    const toggle =
+        getElement("#navigation-toggle");
+
+    const navigation =
+        getElement("#site-navigation");
+
+    if (!toggle || !navigation) {
+        return;
+    }
+
+    toggle.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                navigation.classList.toggle(
+                    "site-navigation--open"
+                );
+
+            toggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+        }
+    );
+
+
+    navigation.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                event.target.closest(
+                    ".site-navigation__link"
+                )
+            ) {
+
+                navigation.classList.remove(
+                    "site-navigation--open"
+                );
+
+                toggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+            }
+        }
+    );
+}
+
+
+/* =========================================================
+   SCROLL EFFECTS
+========================================================= */
+
+function initializeScrollEffects() {
+
+    const header =
+        getElement(".site-header");
+
+    const scrollTop =
+        getElement("#scroll-top-button");
+
+
+    const handleScroll =
+        () => {
+
+            const scrollPosition =
+                window.scrollY;
+
+            if (header) {
+
+                header.classList.toggle(
+                    "site-header--scrolled",
+                    scrollPosition > 30
+                );
+            }
+
+            if (scrollTop) {
+
+                scrollTop.classList.toggle(
+                    "scroll-top-button--visible",
+                    scrollPosition > 500
+                );
+            }
+        };
+
+
+    window.addEventListener(
+        "scroll",
+        handleScroll,
+        {
+            passive: true
+        }
+    );
+
+
+    handleScroll();
+
+
+    if (scrollTop) {
+
+        scrollTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        );
+    }
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+function initializeActiveNavigation() {
+
+    const sections =
+        getElements(
+            "main .portfolio-section"
+        );
+
+    const links =
+        getElements(
+            ".site-navigation__link"
+        );
+
+    if (!sections.length) {
+        return;
+    }
+
+    const observer =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    const id =
+                        entry.target.id;
+
+                    links.forEach((link) => {
+
+                        link.classList.toggle(
+                            "site-navigation__link--active",
+                            link.getAttribute("href") ===
+                            `#${id}`
+                        );
+                    });
+                });
+
+            },
+            {
+                rootMargin:
+                    "-35% 0px -55% 0px"
+            }
+        );
+
+
+    sections.forEach(
+        (section) =>
+            observer.observe(section)
+    );
+}
+
+
+/* =========================================================
+   REVEAL ANIMATIONS
+========================================================= */
+
+function initializeRevealAnimations() {
+
+    const elements =
+        getElements(".reveal");
+
+    if (!elements.length) {
+        return;
+    }
+
+    const prefersReducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+
+    if (prefersReducedMotion) {
+
+        elements.forEach((element) => {
+
+            element.classList.add(
+                "reveal--visible"
+            );
+
+        });
+
+        return;
+    }
+
+
+    const observer =
+        new IntersectionObserver(
+            (entries, observerInstance) => {
+
+                entries.forEach((entry) => {
+
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    entry.target.classList.add(
+                        "reveal--visible"
+                    );
+
+                    observerInstance.unobserve(
+                        entry.target
+                    );
+                });
+
+            },
+            {
+                threshold: 0.08
+            }
+        );
+
+
+    elements.forEach(
+        (element) =>
+            observer.observe(element)
+    );
+
+
+    initializeActiveNavigation();
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimeout;
+
+
+function showToast(message) {
+
+    const toast =
+        getElement("#toast");
+
+    if (!toast) {
+        return;
+    }
+
+    toast.textContent =
+        message;
+
+    toast.classList.add(
+        "toast--visible"
+    );
+
+    clearTimeout(toastTimeout);
+
+    toastTimeout =
+        setTimeout(() => {
+
+            toast.classList.remove(
+                "toast--visible"
+            );
+
+        }, 2500);
+}
+
+
+/* =========================================================
+   UTILITY
+========================================================= */
+
+function capitalize(value) {
+
+    if (!value) {
+        return "";
+    }
+
+    return (
+        value.charAt(0).toUpperCase() +
+        value.slice(1)
+    );
+}
+
+
+/* =========================================================
+   START APPLICATION
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    loadPortfolioData
+);

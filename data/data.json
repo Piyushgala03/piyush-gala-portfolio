@@ -1,6 +1,6 @@
 {
     "seo": {
-        "title": "Alex Morgan | Software Engineer",
+        "title": "Piyush Gala Software Engineer",
         "description": "Professional portfolio of Alex Morgan, a software engineer specializing in backend development, automation and scalable web applications."
     },
 
@@ -62,17 +62,17 @@
 
 
     "personal": {
-        "name": "Alex Morgan",
-        "shortName": "Alex",
-        "role": "Software Engineer & Backend Developer",
+        "name": "Piyush Gala",
+        "shortName": "Piyush",
+        "role": "Junior Software Engineer & Backend Developer",
 
         "location": "Mumbai, India",
 
-        "email": "alex.morgan@example.com",
+        "email": "pythongala2003@gmail.com",
 
-        "phone": "+91 98765 43210",
+        "phone": "+91 9579038258",
 
-        "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85",
+        "profileImage": "static/piyush_gala.png",
 
         "openToWork": true,
 
@@ -89,15 +89,15 @@
 
         "stats": [
             {
-                "value": "3+",
+                "value": "1+",
                 "label": "Years Experience"
             },
             {
-                "value": "20+",
+                "value": "10+",
                 "label": "Projects"
             },
             {
-                "value": "8+",
+                "value": "5+",
                 "label": "Technologies"
             }
         ]
@@ -144,7 +144,7 @@
 
             "institution": "Mumbai University",
 
-            "period": "2021 – 2024",
+            "period": "2022 – 2025",
 
             "grade": "9.44 / 10 CGPA",
 
@@ -154,38 +154,38 @@
         {
             "degree": "Higher Secondary Certificate",
 
-            "institution": "Example Junior College",
+            "institution": "J. K. Shah Junior College",
 
-            "period": "2019 – 2021",
+            "period": "2020 – 2022",
 
-            "grade": "88%",
+            "grade": "82%",
 
-            "location": "Mumbai, India"
+            "location": "Gujarat, India"
         },
 
         {
             "degree": "Secondary School Certificate",
 
-            "institution": "Example High School",
+            "institution": "Ratanshi Umarshi Rambhiya English High School",
 
-            "period": "2018 – 2019",
+            "period": "2019 – 2020",
 
-            "grade": "91%",
+            "grade": "78%",
 
-            "location": "Mumbai, India"
+            "location": "Gujarat, India"
         }
     ],
 
 
     "experience": [
         {
-            "role": "Software Engineer",
+            "role": "Junior Software Engineer",
 
-            "company": "TechNova Solutions",
+            "company": "Secmark Consultancy Ltd.",
 
-            "duration": "1 yr 8 mos",
+            "duration": "1 yr 2 mos",
 
-            "period": "Jan 2025 – Present",
+            "period": "July 2025 – Present",
 
             "description": "Working on backend systems, automation workflows and internal engineering tools.",
 
@@ -195,45 +195,6 @@
                 "Build automated testing workflows for critical business processes.",
                 "Improve application reliability through logging, monitoring and debugging.",
                 "Collaborate with developers and QA engineers to deliver production-ready features."
-            ]
-        },
-
-        {
-            "role": "Test Automation Engineer",
-
-            "company": "DigitalWorks Pvt. Ltd.",
-
-            "duration": "1 yr 2 mos",
-
-            "period": "Nov 2023 – Dec 2024",
-
-            "description": "Focused on test automation, quality engineering and automation infrastructure.",
-
-            "responsibilities": [
-                "Created automated test suites using Python and Selenium.",
-                "Developed reusable automation utilities.",
-                "Integrated automated tests into development workflows.",
-                "Investigated application failures and regression issues.",
-                "Worked closely with developers to improve software quality."
-            ]
-        },
-
-        {
-            "role": "Software Development Intern",
-
-            "company": "CodeCraft Labs",
-
-            "duration": "6 mos",
-
-            "period": "May 2023 – Oct 2023",
-
-            "description": "Contributed to web application development and internal engineering projects.",
-
-            "responsibilities": [
-                "Developed frontend components using HTML, CSS and JavaScript.",
-                "Worked with REST APIs.",
-                "Fixed bugs and improved existing application features.",
-                "Participated in code reviews and technical discussions."
             ]
         }
     ],
@@ -260,8 +221,7 @@
                 "PostgreSQL",
                 "MySQL",
                 "SQL",
-                "Database Design",
-                "Query Optimization"
+                "Database Design"
             ]
         },
 
@@ -271,9 +231,7 @@
             "items": [
                 "HTML",
                 "CSS",
-                "JavaScript",
-                "React",
-                "Responsive Design"
+                "JavaScript"
             ]
         },
 
@@ -285,8 +243,7 @@
                 "PyAutoGUI",
                 "PyWinAuto",
                 "Test Automation",
-                "API Testing",
-                "Regression Testing"
+                "API Testing"
             ]
         },
 
@@ -297,8 +254,6 @@
                 "Git",
                 "GitHub",
                 "Linux",
-                "Docker",
-                "Nginx",
                 "VS Code"
             ]
         },
@@ -307,10 +262,7 @@
             "category": "Data & Other",
 
             "items": [
-                "NumPy",
                 "Pandas",
-                "Matplotlib",
-                "Data Analysis",
                 "Web Scraping",
                 "Problem Solving"
             ]
@@ -335,7 +287,7 @@
             "technologies": [
                 "Django",
                 "PostgreSQL",
-                "React",
+                "HTML, CSS & JS",
                 "REST API",
                 "Python"
             ],
@@ -525,14 +477,14 @@
 
 
     "resume": {
-        "url": "assets/resume.pdf",
+        "url": "assets/piyush_gala_resume.pdf",
 
-        "downloadName": "Alex-Morgan-Resume.pdf"
+        "downloadName": "piyush_gala_resume.pdf"
     },
 
 
     "contact": {
-        "email": "alex.morgan@example.com",
+        "email": "pythongala2003@gmail.com",
 
         "description": "Have an interesting project, an engineering opportunity or simply want to connect? I'd love to hear from you.",
 
@@ -540,25 +492,19 @@
             {
                 "label": "LinkedIn",
                 "icon": "in",
-                "url": "https://www.linkedin.com/in/example"
+                "url": "https://www.linkedin.com/in/piyush-gala-"
             },
 
             {
                 "label": "GitHub",
                 "icon": "⌘",
-                "url": "https://github.com/example"
+                "url": "https://github.com/Piyushgala03"
             },
 
             {
                 "label": "Email",
                 "icon": "✉",
-                "url": "mailto:alex.morgan@example.com"
-            },
-
-            {
-                "label": "LeetCode",
-                "icon": "◆",
-                "url": "https://leetcode.com/example"
+                "url": "mailto: pythongala2003@gmail.com"
             }
         ]
     },

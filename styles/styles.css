@@ -932,8 +932,8 @@ ul {
 .career-item__dot {
     position: relative;
 
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 1.5rem;
+    height: 1.5rem;
 
     margin-top: 0.35rem;
 
@@ -1211,3 +1211,594 @@ ul {
 
 .project-card__technologies {
     display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+
+    margin-top: 1rem;
+}
+
+.project-card__technology {
+    padding: 0.25rem 0.5rem;
+
+    border-radius: 0.4rem;
+
+    background: rgba(34, 211, 238, 0.07);
+
+    color: var(--color-accent);
+
+    font-size: 0.65rem;
+}
+
+.project-card__links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+    margin-top: auto;
+    padding-top: 1.3rem;
+}
+
+.project-card__link {
+    color: var(--color-text);
+
+    font-size: 0.75rem;
+    font-weight: 650;
+
+    transition:
+        color var(--transition-fast);
+}
+
+.project-card__link:hover {
+    color: var(--color-accent);
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievements-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(min(100%, 18rem), 1fr)
+        );
+
+    gap: 1rem;
+}
+
+.achievement-card {
+    padding: 1.5rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+
+    background: var(--color-surface);
+}
+
+.achievement-card__icon {
+    display: grid;
+    place-items: center;
+
+    width: 2.7rem;
+    aspect-ratio: 1;
+
+    border-radius: 0.8rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.2),
+            rgba(34, 211, 238, 0.1)
+        );
+
+    font-size: 1.2rem;
+}
+
+.achievement-card__title {
+    margin: 1rem 0 0;
+
+    font-size: 1.05rem;
+}
+
+.achievement-card__description {
+    margin: 0.5rem 0 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   FREELANCE
+========================================================= */
+
+.freelance-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(min(100%, 22rem), 1fr)
+        );
+
+    gap: 1rem;
+}
+
+.freelance-card {
+    padding: 1.5rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+
+    background: var(--color-surface);
+}
+
+.freelance-card__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.freelance-card__title {
+    margin: 0;
+
+    font-size: 1.15rem;
+}
+
+.freelance-card__status {
+    color: var(--color-success);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.freelance-card__client {
+    margin-top: 0.25rem;
+
+    color: var(--color-primary-light);
+
+    font-size: 0.8rem;
+}
+
+.freelance-card__description {
+    margin: 1rem 0 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.85rem;
+}
+
+.freelance-card__technologies {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.4rem;
+
+    margin-top: 1rem;
+}
+
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.resume-section {
+    padding-top: 3rem;
+}
+
+.resume-card,
+.contact-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: clamp(2rem, 5vw, 4rem);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139, 92, 246, 0.12),
+            rgba(34, 211, 238, 0.04)
+        );
+}
+
+.resume-card__title,
+.contact-card__title {
+    margin: 0;
+
+    font-size: clamp(
+        1.8rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.resume-card__description,
+.contact-card__description {
+    max-width: 40rem;
+
+    margin: 0.8rem 0 0;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    padding-bottom: 5rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    margin-top: 2rem;
+}
+
+.contact-link {
+    padding: 0.7rem 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    background: var(--color-surface);
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.78rem;
+
+    transition:
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--color-text);
+
+    border-color: var(--color-border-hover);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    border-top: 1px solid var(--color-border);
+
+    padding-block: 1.5rem;
+}
+
+.site-footer__container {
+    display: flex;
+
+    justify-content: space-between;
+    gap: 1rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.72rem;
+}
+
+.site-footer__copyright,
+.site-footer__tagline {
+    margin: 0;
+}
+
+
+/* =========================================================
+   SCROLL TOP
+========================================================= */
+
+.scroll-top-button {
+    position: fixed;
+
+    right: 1.25rem;
+    bottom: 1.25rem;
+
+    display: grid;
+    place-items: center;
+
+    width: 2.8rem;
+    aspect-ratio: 1;
+
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+
+    background: rgba(13, 17, 28, 0.8);
+
+    color: var(--color-text);
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.scroll-top-button--visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+    bottom: 1.5rem;
+
+    transform:
+        translate(-50%, 1rem);
+
+    padding: 0.7rem 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    background: rgba(13, 17, 28, 0.95);
+
+    color: var(--color-text);
+
+    font-size: 0.75rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.toast--visible {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+
+    transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+}
+
+.reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   EMPTY / ERROR STATES
+========================================================= */
+
+.empty-state {
+    grid-column: 1 / -1;
+
+    padding: 3rem 1rem;
+
+    text-align: center;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 60rem) {
+
+    .header-cta {
+        display: none;
+    }
+
+    .hero-section__container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-profile {
+        justify-content: flex-start;
+    }
+
+    .profile-card {
+        width: min(100%, 25rem);
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 48rem) {
+
+    .site-header__container {
+        min-height: 4.5rem;
+    }
+
+    .navigation-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .site-navigation {
+        position: absolute;
+
+        top: 100%;
+        left: 1rem;
+        right: 1rem;
+
+        padding: 1rem;
+
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-medium);
+
+        background: rgba(13, 17, 28, 0.96);
+
+        backdrop-filter: blur(1.5rem);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-0.5rem);
+
+        transition:
+            opacity var(--transition-normal),
+            visibility var(--transition-normal),
+            transform var(--transition-normal);
+    }
+
+    .site-navigation--open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    .site-navigation__list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-navigation__link {
+        display: block;
+
+        padding: 0.65rem;
+    }
+
+    .site-navigation__link::after {
+        display: none;
+    }
+
+    .hero-section {
+        padding-top: 7rem;
+    }
+
+    .section-heading--with-action {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .career-item__header {
+        flex-direction: column;
+    }
+
+    .resume-card,
+    .contact-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-footer__container {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 30rem) {
+
+    .container {
+        width: min(
+            calc(100% - 1.25rem),
+            var(--container-width)
+        );
+    }
+
+    .portfolio-section {
+        padding-block: 4rem;
+    }
+
+    .hero-title {
+        font-size: clamp(
+            2.6rem,
+            14vw,
+            4rem
+        );
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .quick-links {
+        gap: 0.4rem;
+    }
+
+    .quick-link {
+        font-size: 0.7rem;
+    }
+
+    .profile-card__stats {
+        gap: 0.25rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
