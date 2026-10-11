@@ -65,28 +65,19 @@
         "name": "Piyush Gala",
         "shortName": "Piyush",
         "role": "Junior Software Engineer & Backend Developer",
-
         "location": "Mumbai, India",
-
         "email": "pythongala2003@gmail.com",
-
         "phone": "+91 9579038258",
-
         "profileImage": "static/piyush_gala.png",
-
         "openToWork": true,
-
         "openToWorkLabel": "Open to Work"
     },
 
 
     "hero": {
-        "eyebrow": "Software Engineer • Backend Developer",
-
+        "eyebrow": "Software Engineer • Backend Developer • Automation Engineer",
         "title": "Turning complex problems into elegant software.",
-
         "description": "I build reliable, scalable and user-focused applications with a strong interest in backend engineering, automation and data-driven systems.",
-
         "stats": [
             {
                 "value": "1+",
@@ -106,15 +97,13 @@
 
     "about": {
         "title": "Engineer by mindset. Builder by nature.",
-
         "subtitle": "A little about who I am and how I approach technology.",
-
         "paragraphs": [
-            "I'm a software engineer who enjoys transforming ideas into clean, maintainable and practical software. I particularly enjoy backend development, APIs, automation and solving problems that require both logical thinking and engineering discipline.",
-
-            "My approach is simple: understand the problem first, design a maintainable solution, then build it with attention to performance, reliability and developer experience.",
-
-            "Outside of writing code, I enjoy learning new technologies, experimenting with side projects and understanding how products can create real-world value."
+            "I'm a Python-focused Software Developer with experience building backend systems, REST APIs, automation utilities, and database-driven applications. I enjoy turning complex problems into clean, reliable, and maintainable software.",
+            
+            "My strongest interest is backend engineering with Python, particularly Django, REST APIs, PostgreSQL, automation, and performance optimization. I like going beyond making code simply work — I enjoy understanding how it works, identifying bottlenecks, and finding ways to make systems more efficient and reliable.",
+            
+            "I approach engineering with curiosity and a problem-solving mindset: understand the problem first, design the right solution, then build it with attention to performance, scalability, and maintainability. I'm continuously learning and building projects that help me grow into a strong backend engineer."
         ],
 
         "highlights": [
@@ -141,37 +130,25 @@
     "education": [
         {
             "degree": "Bachelor of Science in Information Technology",
-
             "institution": "Mumbai University",
-
             "period": "2022 – 2025",
-
             "grade": "9.44 / 10 CGPA",
-
             "location": "Mumbai, India"
         },
 
         {
             "degree": "Higher Secondary Certificate",
-
             "institution": "J. K. Shah Junior College",
-
             "period": "2020 – 2022",
-
             "grade": "82%",
-
             "location": "Gujarat, India"
         },
 
         {
             "degree": "Secondary School Certificate",
-
             "institution": "Ratanshi Umarshi Rambhiya English High School",
-
             "period": "2019 – 2020",
-
             "grade": "78%",
-
             "location": "Gujarat, India"
         }
     ],
@@ -180,20 +157,17 @@
     "experience": [
         {
             "role": "Junior Software Engineer",
-
             "company": "Secmark Consultancy Ltd.",
-
-            "duration": "1 yr 2 mos",
-
+            "startDate": "2025-07-01",
+            "current": true,
+            "endDate": null,
             "period": "July 2025 – Present",
-
             "description": "Working on backend systems, automation workflows and internal engineering tools.",
-
             "responsibilities": [
-                "Develop and maintain Python-based backend applications.",
-                "Design REST APIs and integrate third-party services.",
-                "Build automated testing workflows for critical business processes.",
-                "Improve application reliability through logging, monitoring and debugging.",
+                "Developed automation utilities for web scraping, web automation, EXE automation, and AI integration to reduce manual effort.",
+                "Developed a test automation utility for our web-based product, Compliance Sutra.",
+                "Develop features in Python-based backend applications.",
+                "Improve application reliability through logging, monitoring, and debugging.",
                 "Collaborate with developers and QA engineers to deliver production-ready features."
             ]
         }
@@ -203,7 +177,6 @@
     "skills": [
         {
             "category": "Backend Development",
-
             "items": [
                 "Python",
                 "Django",
@@ -216,7 +189,6 @@
 
         {
             "category": "Databases",
-
             "items": [
                 "PostgreSQL",
                 "MySQL",
@@ -227,7 +199,6 @@
 
         {
             "category": "Frontend",
-
             "items": [
                 "HTML",
                 "CSS",
@@ -237,33 +208,33 @@
 
         {
             "category": "Automation & Testing",
-
             "items": [
+                "Test Automation",
                 "Selenium",
+                "Playwright",
                 "PyAutoGUI",
                 "PyWinAuto",
-                "Test Automation",
                 "API Testing"
             ]
         },
 
         {
             "category": "Tools & DevOps",
-
             "items": [
                 "Git",
                 "GitHub",
-                "Linux",
-                "VS Code"
+                "VS Code",
+                "Linux"
             ]
         },
 
         {
             "category": "Data & Other",
-
             "items": [
                 "Pandas",
                 "Web Scraping",
+                "Logging",
+                "Configuration Management",
                 "Problem Solving"
             ]
         }
@@ -273,17 +244,11 @@
     "projects": [
         {
             "title": "Investor Analytics Platform",
-
             "category": "FinTech / Web Application",
-
             "description": "A subscription-based platform providing research tools, calculators, screeners and analytics for long-term investors and swing traders.",
-
             "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=85",
-
             "imageAlt": "Financial market analytics displayed on screens",
-
             "featured": true,
-
             "technologies": [
                 "Django",
                 "PostgreSQL",
@@ -291,94 +256,10 @@
                 "REST API",
                 "Python"
             ],
-
             "links": {
                 "github": "https://github.com/example/investor-platform",
                 "live": "https://example.com/investor-platform",
                 "documentation": "https://docs.example.com/investor-platform"
-            }
-        },
-
-        {
-            "title": "Test Automation Framework",
-
-            "category": "Automation",
-
-            "description": "A reusable Python automation framework designed to simplify test creation, execution, logging and reporting.",
-
-            "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85",
-
-            "imageAlt": "Developer working on automation code",
-
-            "featured": true,
-
-            "technologies": [
-                "Python",
-                "Selenium",
-                "PyTest",
-                "Logging",
-                "Automation"
-            ],
-
-            "links": {
-                "github": "https://github.com/example/test-automation",
-                "live": "",
-                "documentation": "https://docs.example.com/test-automation"
-            }
-        },
-
-        {
-            "title": "Django Task Management API",
-
-            "category": "Backend",
-
-            "description": "A production-style REST API for task management with authentication, permissions, filtering and PostgreSQL integration.",
-
-            "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
-
-            "imageAlt": "Programming code displayed on a laptop",
-
-            "featured": false,
-
-            "technologies": [
-                "Django",
-                "DRF",
-                "PostgreSQL",
-                "JWT",
-                "Docker"
-            ],
-
-            "links": {
-                "github": "https://github.com/example/django-task-api",
-                "live": "https://api.example.com",
-                "documentation": "https://docs.example.com/task-api"
-            }
-        },
-
-        {
-            "title": "Personal Finance Calculator",
-
-            "category": "Web Application",
-
-            "description": "A collection of financial calculators including SIP, CAGR, XIRR, position sizing and investment planning tools.",
-
-            "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85",
-
-            "imageAlt": "Financial planning and calculator concept",
-
-            "featured": false,
-
-            "technologies": [
-                "JavaScript",
-                "React",
-                "Recharts",
-                "CSS"
-            ],
-
-            "links": {
-                "github": "https://github.com/example/finance-calculators",
-                "live": "https://example.com/calculators",
-                "documentation": ""
             }
         }
     ],
@@ -387,99 +268,28 @@
     "achievements": [
         {
             "icon": "🏆",
-
             "title": "Academic Excellence",
-
             "description": "Graduated with a strong academic record and consistently maintained high performance throughout university."
         },
 
         {
             "icon": "🚀",
-
             "title": "Automation Impact",
-
             "description": "Designed reusable automation workflows that reduced repetitive manual testing effort."
         },
 
         {
-            "icon": "💻",
-
-            "title": "Open Source Projects",
-
-            "description": "Built and published multiple development projects covering backend development, automation and data analysis."
-        },
-
-        {
             "icon": "📚",
-
             "title": "Continuous Learning",
-
             "description": "Continuously expanding expertise across backend engineering, databases, DevOps and software architecture."
         }
     ],
 
 
-    "freelance": [
-        {
-            "title": "Business Website",
-
-            "client": "Local Business",
-
-            "status": "Completed",
-
-            "description": "Designed and developed a responsive business website with contact forms, service pages and SEO-friendly structure.",
-
-            "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
-
-            "url": "https://example.com/business"
-        },
-
-        {
-            "title": "Inventory Management System",
-
-            "client": "Small Business",
-
-            "status": "Completed",
-
-            "description": "Built an internal inventory management application to track products, stock levels and transactions.",
-
-            "technologies": [
-                "Python",
-                "Django",
-                "PostgreSQL"
-            ],
-
-            "url": "https://example.com/inventory"
-        },
-
-        {
-            "title": "Automation Utility",
-
-            "client": "Private Client",
-
-            "status": "Ongoing",
-
-            "description": "Developed a custom Python automation utility to eliminate repetitive desktop operations.",
-
-            "technologies": [
-                "Python",
-                "PyAutoGUI",
-                "PyWinAuto"
-            ],
-
-            "url": ""
-        }
-    ],
-
-
     "resume": {
-        "url": "assets/piyush_gala_resume.pdf",
+        "url": "assets/Resume_Piyush_Gala.pdf",
 
-        "downloadName": "piyush_gala_resume.pdf"
+        "downloadName": "Resume_Piyush_Gala.pdf"
     },
 
 

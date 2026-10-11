@@ -616,6 +616,55 @@ function renderEducation() {
    EXPERIENCE
 ========================================================= */
 
+function calculateDuration(startDate, endDate = new Date()) {
+
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    let months =
+        (end.getFullYear() - start.getFullYear()) * 12 +
+        (end.getMonth() - start.getMonth());
+
+    if (end.getDate() < start.getDate()) {
+        months--;
+    }
+
+    months = Math.max(months, 0);
+
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+
+    const parts = [];
+
+    if (years > 0) {
+        parts.push(
+            `${years} ${years === 1 ? "yr" : "yrs"}`
+        );
+    }
+
+    if (remainingMonths > 0) {
+        parts.push(
+            `${remainingMonths} ${
+                remainingMonths === 1 ? "mo" : "mos"
+            }`
+        );
+    }
+
+    return parts.length > 0
+        ? parts.join(" ")
+        : "Less than 1 mo";
+}
+
+function formatExperienceDate(dateString) {
+
+    const date = new Date(dateString);
+
+    return date.toLocaleDateString("en-US", {
+        month: "long",
+        year: "numeric"
+    });
+}
+
 function renderExperience() {
 
     const container =
@@ -676,12 +725,20 @@ function renderExperience() {
                 )
             );
 
+            const durationText =
+                calculateDuration(
+                    experience.startDate,
+                    experience.current
+                        ? new Date()
+                        : experience.endDate
+                );
+
 
             const duration =
                 createElement(
                     "span",
                     "career-item__duration",
-                    experience.duration
+                    durationText
                 );
 
             header.append(
@@ -692,11 +749,15 @@ function renderExperience() {
 
             /* Period */
 
+            const startPeriod = formatExperienceDate(experience.startDate);
+                
+            const endPeriod = experience.current ? "Present" : formatExperienceDate(experience.endDate);
+
             const period =
                 createElement(
                     "div",
                     "career-item__period",
-                    experience.period
+                    `${startPeriod} – ${endPeriod}`
                 );
 
 
@@ -1050,112 +1111,104 @@ function renderAchievements() {
 ========================================================= */
 
 function renderFreelance() {
-
-    const container =
-        getElement("#freelance-grid");
+    const container = getElement("#freelance-grid");
 
     if (!container) {
         return;
     }
 
+    const projects = portfolioData.freelance || [];
+
+    if (projects.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <span class="empty-state-icon">🚀</span>
+                <h3>Working on something exciting...</h3>
+                <p>Freelance projects will appear here soon.</p>
+            </div>
+        `;
+        return;
+    }
+
     container.innerHTML = "";
 
-    (portfolioData.freelance || [])
-        .forEach((project) => {
+    projects.forEach((project) => {
+        const card = createElement(
+            "article",
+            "freelance-card reveal"
+        );
 
-            const card =
-                createElement(
-                    "article",
-                    "freelance-card reveal"
-                );
+        const header = createElement(
+            "div",
+            "freelance-card__header"
+        );
 
-            const header =
-                createElement(
-                    "div",
-                    "freelance-card__header"
-                );
+        const heading = createElement("div");
 
-            const heading =
-                createElement(
-                    "div"
-                );
+        heading.append(
+            createElement(
+                "h3",
+                "freelance-card__title",
+                project.title
+            ),
+            createElement(
+                "div",
+                "freelance-card__client",
+                project.client
+            )
+        );
 
-            heading.append(
-                createElement(
-                    "h3",
-                    "freelance-card__title",
-                    project.title
-                ),
+        header.appendChild(heading);
 
+        if (project.status) {
+            header.appendChild(
                 createElement(
-                    "div",
-                    "freelance-card__client",
-                    project.client
+                    "span",
+                    "freelance-card__status",
+                    project.status
                 )
             );
+        }
 
-            header.appendChild(heading);
+        const description = createElement(
+            "p",
+            "freelance-card__description",
+            project.description
+        );
 
-            if (project.status) {
+        const technologies = createElement(
+            "div",
+            "freelance-card__technologies"
+        );
 
-                header.appendChild(
-                    createElement(
-                        "span",
-                        "freelance-card__status",
-                        project.status
-                    )
-                );
-            }
-
-
-            const description =
+        (project.technologies || []).forEach((technology) => {
+            technologies.appendChild(
                 createElement(
-                    "p",
-                    "freelance-card__description",
-                    project.description
-                );
-
-
-            const technologies =
-                createElement(
-                    "div",
-                    "freelance-card__technologies"
-                );
-
-            (project.technologies || [])
-                .forEach((technology) => {
-
-                    technologies.appendChild(
-                        createElement(
-                            "span",
-                            "skill-item",
-                            technology
-                        )
-                    );
-                });
-
-
-            card.append(
-                header,
-                description,
-                technologies
+                    "span",
+                    "skill-item",
+                    technology
+                )
             );
-
-
-            if (project.url) {
-
-                card.appendChild(
-                    createLink(
-                        project.url,
-                        "View Project ↗",
-                        "project-card__link"
-                    )
-                );
-            }
-
-
-            container.appendChild(card);
         });
+
+        card.append(
+            header,
+            description,
+            technologies
+        );
+
+        if (project.url) {
+            card.appendChild(
+                createLink(
+                    project.url,
+                    "View Project ↗",
+                    "project-card__link"
+                )
+            );
+        }
+
+        container.appendChild(card);
+    });
 }
 
 
