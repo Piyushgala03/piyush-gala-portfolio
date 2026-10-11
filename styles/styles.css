@@ -286,7 +286,7 @@ ul {
 .site-logo {
     position: relative;
 
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.04em;
 }
@@ -667,7 +667,7 @@ ul {
 .profile-card__name {
     margin: 0;
 
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: -0.04em;
 }
 
